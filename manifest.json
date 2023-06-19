@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Feet to Meters Converter",
+    "version": "1.0",
+    "description": "Converts mentions of feet to meters.",
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "storage"
+    ],
+    "browser_action": {
+      "default_icon": {
+        "48": "icon48.png",
+        "128": "icon128.png",
+        "1080": "icon1080.png"
+      },
+      "default_title": "Feet to Meters Converter",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
